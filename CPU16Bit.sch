@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
-LIBS:CPU8Bit-cache
+LIBS:CPU16Bit-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 7
 Title "16Bit CPU"
 Date "2019-07-05"
 Rev "1.0"
@@ -52,5 +52,17 @@ S 1250 3950 1250 950
 U 5D302BBF
 F0 "Ram Rom Memory" 50
 F1 "Memory.sch" 50
+$EndSheet
+$Sheet
+S 3950 3000 1500 1150
+U 5E2072B0
+F0 "Micro Code Control" 50
+F1 "Control.sch" 50
+$EndSheet
+$Sheet
+S 6250 2700 1300 1000
+U 5D4D1D36
+F0 "General Purpose Registers" 50
+F1 "GPRs.sch" 50
 $EndSheet
 $EndSCHEMATC

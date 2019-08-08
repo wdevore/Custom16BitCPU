@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
-LIBS:CPU8Bit-cache
+LIBS:CPU16Bit-cache
 EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 5 5
+Sheet 5 7
 Title "RAM memory"
 Date "2019-07-12"
 Rev "1.0"
@@ -23,28 +23,6 @@ F 1 "32Kx8 NVRAM FM1808 Low" V 6700 2300 50  0000 C CNN
 F 2 "" H 6300 3500 50  0001 C CNN
 F 3 "" H 6300 3500 50  0001 C CNN
 	1    6700 2950
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS373 U28
-U 1 1 5D32B5C5
-P 4200 2600
-F 0 "U28" H 3950 3250 50  0000 C CNN
-F 1 "Addr Low 74LS373" V 4200 2600 50  0000 C CNN
-F 2 "" H 4200 2600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS373" H 4200 2600 50  0001 C CNN
-	1    4200 2600
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS373 U29
-U 1 1 5D32D20B
-P 4200 4550
-F 0 "U29" H 3950 5200 50  0000 C CNN
-F 1 "Addr Hi 74LS373" V 4200 4550 50  0000 C CNN
-F 2 "" H 4200 4550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS373" H 4200 4550 50  0001 C CNN
-	1    4200 4550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -129,10 +107,8 @@ Text HLabel 2450 2700 0    50   Input ~ 0
 BUS_6
 Text HLabel 2450 2800 0    50   Input ~ 0
 BUS_7
-Text HLabel 2250 3000 0    50   Input ~ 0
+Text HLabel 950  2900 0    50   Input ~ 0
 Addr_LD
-Wire Wire Line
-	2250 3000 3200 3000
 Text HLabel 2450 4050 0    50   Input ~ 0
 BUS_8
 Text HLabel 2450 4150 0    50   Input ~ 0
@@ -183,17 +159,6 @@ F 3 "" H 4200 1600 50  0001 C CNN
 	1    4200 1600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4200 1600 4200 1700
-Wire Wire Line
-	4200 3750 3600 3750
-Wire Wire Line
-	3600 3750 3600 1700
-Wire Wire Line
-	3600 1700 4200 1700
-Connection ~ 4200 1700
-Wire Wire Line
-	4200 1700 4200 1800
 Wire Wire Line
 	4200 3400 4950 3400
 Wire Wire Line
@@ -289,8 +254,6 @@ Wire Wire Line
 	5250 3550 5250 4350
 Wire Wire Line
 	5150 3650 5150 4450
-Wire Wire Line
-	4200 1700 6700 1700
 Wire Wire Line
 	5150 4450 6300 4450
 Connection ~ 5150 4450
@@ -505,8 +468,50 @@ Wire Wire Line
 	7600 5250 7600 1700
 Wire Wire Line
 	7600 1700 6700 1700
-Connection ~ 6700 1700
 NoConn ~ 4700 4750
+$Comp
+L 74xx:74LS574 U?
+U 1 1 5E1F0F83
+P 4200 2600
+F 0 "U?" H 4000 3250 50  0000 C CNN
+F 1 "74LS574" V 4200 2500 50  0000 C CNN
+F 2 "" H 4200 2600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS574" H 4200 2600 50  0001 C CNN
+	1    4200 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS574 U?
+U 1 1 5E1F2242
+P 4200 4550
+F 0 "U?" H 4000 5200 50  0000 C CNN
+F 1 "74LS574" V 4200 4400 50  0000 C CNN
+F 2 "" H 4200 4550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS574" H 4200 4550 50  0001 C CNN
+	1    4200 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 1600 4200 1800
+$Comp
+L 74xx:74LS08 U?
+U 1 1 5E1F52F7
+P 1450 3000
+F 0 "U?" H 1450 3325 50  0000 C CNN
+F 1 "74LS08" H 1450 3234 50  0000 C CNN
+F 2 "" H 1450 3000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 1450 3000 50  0001 C CNN
+	1    1450 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 3000 3200 3000
+Wire Wire Line
+	950  2900 1150 2900
+Text HLabel 950  3100 0    50   Input ~ 0
+CLK
+Wire Wire Line
+	950  3100 1150 3100
 Wire Bus Line
 	6200 3350 6200 3950
 Wire Bus Line
@@ -514,21 +519,21 @@ Wire Bus Line
 Wire Bus Line
 	6200 6150 6200 6750
 Wire Bus Line
-	4800 3950 4800 6150
+	7250 5950 7250 7700
 Wire Bus Line
-	4800 1950 4800 2700
-Wire Bus Line
-	6200 1950 6200 3250
-Wire Bus Line
-	2550 1900 2550 2700
-Wire Bus Line
-	3350 1900 3350 2700
+	7250 1150 7250 3850
 Wire Bus Line
 	2550 3850 2550 4650
 Wire Bus Line
 	3600 3850 3600 7700
 Wire Bus Line
-	7250 5950 7250 7700
+	2550 1900 2550 2700
 Wire Bus Line
-	7250 1150 7250 3850
+	3350 1900 3350 2700
+Wire Bus Line
+	6200 1950 6200 3250
+Wire Bus Line
+	4800 3950 4800 6150
+Wire Bus Line
+	4800 1950 4800 2700
 $EndSCHEMATC

@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
-LIBS:CPU8Bit-cache
+LIBS:CPU16Bit-cache
 EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 4 5
+Sheet 4 7
 Title "Output Module"
 Date "2019-07-06"
 Rev "1.0"
@@ -317,7 +317,7 @@ $EndComp
 Text HLabel 1150 4900 0    50   Input ~ 0
 CLK
 Text HLabel 1100 4700 0    50   Input ~ 0
-IO_OUT_L
+IO_LD_Out
 $Comp
 L 74xx:74LS273 U9
 U 1 1 5D2ACDC6
@@ -1923,6 +1923,23 @@ Wire Wire Line
 	9100 2200 9100 4000
 Wire Wire Line
 	9100 4000 8600 4000
+Connection ~ 9100 2200
+Wire Wire Line
+	9100 2200 10000 2200
+Connection ~ 8600 4000
+$Comp
+L 74xx:74LS244 U?
+U 1 1 5D4CD127
+P 8000 3500
+F 0 "U?" H 8250 4150 50  0000 C CNN
+F 1 "74LS244" H 7800 4150 50  0000 C CNN
+F 2 "" H 8000 3500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS244" H 8000 3500 50  0001 C CNN
+	1    8000 3500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4300 8000 4450
 Wire Bus Line
 	8600 1300 8600 2000
 Wire Bus Line
@@ -1953,21 +1970,4 @@ Wire Bus Line
 	7150 5200 7150 8950
 Wire Bus Line
 	6950 700  6950 3600
-Connection ~ 9100 2200
-Wire Wire Line
-	9100 2200 10000 2200
-Connection ~ 8600 4000
-$Comp
-L 74xx:74LS244 U?
-U 1 1 5D4CD127
-P 8000 3500
-F 0 "U?" H 8250 4150 50  0000 C CNN
-F 1 "74LS244" H 7800 4150 50  0000 C CNN
-F 2 "" H 8000 3500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS244" H 8000 3500 50  0001 C CNN
-	1    8000 3500
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	8000 4300 8000 4450
 $EndSCHEMATC

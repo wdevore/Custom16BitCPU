@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
-LIBS:CPU8Bit-cache
+LIBS:CPU16Bit-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 5
+Sheet 2 7
 Title "Clock Module"
 Date "2019-07-05"
 Rev "1.0"
