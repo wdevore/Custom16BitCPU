@@ -1,8 +1,8 @@
 EESchema Schematic File Version 4
 LIBS:CPU16Bit-cache
-EELAYER 30 0
+EELAYER 29 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr A3 16535 11693
 encoding utf-8
 Sheet 2 7
 Title "Clock Module"
@@ -205,49 +205,8 @@ Wire Wire Line
 	3900 2300 3900 2650
 Wire Wire Line
 	3650 2150 3750 2150
-$Comp
-L 74xx:74LS257 U3
-U 1 1 5D1FD843
-P 6400 5500
-F 0 "U3" H 6150 6250 50  0000 C CNN
-F 1 "74LS257" H 6650 6250 50  0000 C CNN
-F 2 "" H 6400 5500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS257" H 6400 5500 50  0001 C CNN
-	1    6400 5500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2900 1950 3000 1950
-$Comp
-L power:VCC #PWR07
-U 1 1 5D2005BA
-P 6400 4500
-F 0 "#PWR07" H 6400 4350 50  0001 C CNN
-F 1 "VCC" H 6417 4673 50  0000 C CNN
-F 2 "" H 6400 4500 50  0001 C CNN
-F 3 "" H 6400 4500 50  0001 C CNN
-	1    6400 4500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR08
-U 1 1 5D20138F
-P 6400 6600
-F 0 "#PWR08" H 6400 6350 50  0001 C CNN
-F 1 "GND" H 6405 6427 50  0000 C CNN
-F 2 "" H 6400 6600 50  0001 C CNN
-F 3 "" H 6400 6600 50  0001 C CNN
-	1    6400 6600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6400 4500 6400 4600
-Wire Wire Line
-	3000 4900 5900 4900
-Wire Wire Line
-	3000 1950 3000 4900
-Text Label 5700 4900 0    50   ~ 0
-Clock
 $Comp
 L Timer:NE555 U2
 U 1 1 5D2276AA
@@ -384,16 +343,6 @@ Wire Wire Line
 	4350 2900 5000 2900
 Wire Wire Line
 	6200 1900 6900 1900
-Wire Wire Line
-	6900 1900 6900 4150
-Wire Wire Line
-	6900 4150 5500 4150
-Wire Wire Line
-	5500 4150 5500 5000
-Wire Wire Line
-	5500 5000 5900 5000
-Text Label 5700 5000 0    50   ~ 0
-Pulse
 Text Notes 4450 1000 0    50   ~ 0
 Pulse Clock
 $Comp
@@ -497,22 +446,11 @@ Wire Wire Line
 	9150 2850 9150 2950
 Wire Wire Line
 	9150 2950 9700 2950
-Wire Wire Line
-	5100 6100 5900 6100
 NoConn ~ 10200 2050
 Text Notes 8050 1000 0    50   ~ 0
 Clock Select
 Connection ~ 9150 2950
 NoConn ~ 3900 2000
-NoConn ~ 5900 5200
-NoConn ~ 5900 5300
-NoConn ~ 5900 5500
-NoConn ~ 5900 5600
-NoConn ~ 5900 5800
-NoConn ~ 5900 5900
-NoConn ~ 6900 5800
-NoConn ~ 6900 5500
-NoConn ~ 6900 5200
 Wire Wire Line
 	5000 2900 5700 2900
 Wire Wire Line
@@ -546,14 +484,6 @@ Wire Notes Line
 	7300 3900 7300 850 
 Wire Notes Line
 	7300 850  10600 850 
-Text HLabel 5200 6200 0    50   Input ~ 0
-HLT
-Wire Wire Line
-	5900 6200 5550 6200
-Text HLabel 7800 5100 2    50   Output ~ 0
-~CLK
-Text HLabel 7800 4900 2    50   Output ~ 0
-CLK
 Wire Wire Line
 	8200 2250 8000 2250
 Connection ~ 9050 2250
@@ -602,17 +532,6 @@ Wire Wire Line
 Connection ~ 10450 3600
 Wire Wire Line
 	10450 3600 10450 3800
-$Comp
-L 74xx:74LS04 U4
-U 2 1 5D713CFD
-P 9500 3600
-F 0 "U4" H 9500 3283 50  0000 C CNN
-F 1 "74LS04" H 9500 3374 50  0000 C CNN
-F 2 "" H 9500 3600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 9500 3600 50  0001 C CNN
-	2    9500 3600
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	9800 3600 10450 3600
 $Comp
@@ -633,22 +552,6 @@ Wire Wire Line
 	8000 2350 8000 2950
 Wire Wire Line
 	8700 2850 8700 3000
-Wire Wire Line
-	6900 4900 7050 4900
-Wire Wire Line
-	7050 5100 7050 4900
-Connection ~ 7050 4900
-$Comp
-L 74xx:74LS04 U4
-U 1 1 5D20668C
-P 7350 5100
-F 0 "U4" H 7350 5417 50  0000 C CNN
-F 1 "74LS04" H 7350 5326 50  0000 C CNN
-F 2 "" H 7350 5100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7350 5100 50  0001 C CNN
-	1    7350 5100
-	1    0    0    1   
-$EndComp
 $Comp
 L Switch:SW_Push_LED SW2
 U 1 1 5D6EC009
@@ -665,12 +568,6 @@ Wire Wire Line
 Wire Wire Line
 	8000 1750 8000 1850
 Connection ~ 8000 1850
-Wire Wire Line
-	7050 4900 7700 4900
-Wire Wire Line
-	5100 3800 7500 3800
-Wire Wire Line
-	5100 3800 5100 6100
 $Comp
 L 74xx:74LS08 U17
 U 3 1 5D792A1C
@@ -704,62 +601,291 @@ Wire Wire Line
 Wire Wire Line
 	7700 3600 8600 3600
 Wire Wire Line
-	7650 5100 7800 5100
-Wire Wire Line
-	7700 4900 7700 3600
-Connection ~ 7700 4900
-Wire Wire Line
-	7700 4900 7800 4900
-Connection ~ 7700 3600
-Wire Wire Line
 	10200 1850 10450 1850
 Wire Wire Line
 	7500 1950 7500 3800
-Connection ~ 7500 3800
+Connection ~ 9550 6100
 Wire Wire Line
-	7500 3800 10450 3800
+	9550 6100 10100 6100
+Text Notes 8950 6650 0    50   ~ 0
+250ns Pulse
+Wire Wire Line
+	9550 6600 9550 6750
+Wire Wire Line
+	9550 6300 9550 6100
+$Comp
+L power:GND #PWR?
+U 1 1 5D6441BF
+P 9550 6750
+AR Path="/5D4D1D36/5D6441BF" Ref="#PWR?"  Part="1" 
+AR Path="/5D302BBF/5D6441BF" Ref="#PWR?"  Part="1" 
+AR Path="/5D1F7234/5D6441BF" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9550 6500 50  0001 C CNN
+F 1 "GND" H 9555 6577 50  0000 C CNN
+F 2 "" H 9550 6750 50  0001 C CNN
+F 3 "" H 9550 6750 50  0001 C CNN
+	1    9550 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D6441C5
+P 9550 6450
+AR Path="/5D4D1D36/5D6441C5" Ref="R?"  Part="1" 
+AR Path="/5D302BBF/5D6441C5" Ref="R?"  Part="1" 
+AR Path="/5D1F7234/5D6441C5" Ref="R?"  Part="1" 
+F 0 "R?" H 9480 6404 50  0000 R CNN
+F 1 "220" H 9480 6495 50  0000 R CNN
+F 2 "" V 9480 6450 50  0001 C CNN
+F 3 "~" H 9550 6450 50  0001 C CNN
+	1    9550 6450
+	-1   0    0    1   
+$EndComp
+$Comp
+L pspice:CAP 4.3nF?
+U 1 1 5D6441CB
+P 9300 6100
+AR Path="/5D4D1D36/5D6441CB" Ref="4.3nF?"  Part="1" 
+AR Path="/5D302BBF/5D6441CB" Ref="4.3nF?"  Part="1" 
+AR Path="/5D1F7234/5D6441CB" Ref="4.3nF?"  Part="1" 
+F 0 "4.3nF?" V 9600 6100 50  0000 C CNN
+F 1 "PulseCap" V 9500 6100 50  0000 C CNN
+F 2 "" H 9300 6100 50  0001 C CNN
+F 3 "~" H 9300 6100 50  0001 C CNN
+	1    9300 6100
+	0    1    1    0   
+$EndComp
+$Comp
+L 74xx:74LS14 U?
+U 1 1 5D654764
+P 9500 3600
+F 0 "U?" H 9500 3283 50  0000 C CNN
+F 1 "74LS14" H 9500 3374 50  0000 C CNN
+F 2 "" H 9500 3600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 9500 3600 50  0001 C CNN
+	1    9500 3600
+	-1   0    0    1   
+$EndComp
+$Comp
+L 74xx:74LS257 U3
+U 1 1 5D1FD843
+P 6400 6400
+F 0 "U3" H 6150 7150 50  0000 C CNN
+F 1 "74LS257" H 6650 7150 50  0000 C CNN
+F 2 "" H 6400 6400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS257" H 6400 6400 50  0001 C CNN
+	1    6400 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 5800 5900 5800
+Text Label 5700 5800 0    50   ~ 0
+Clock
+Text Label 5700 5900 0    50   ~ 0
+Pulse
+NoConn ~ 5900 6400
+NoConn ~ 5900 6500
+NoConn ~ 5900 6700
+NoConn ~ 5900 6800
+NoConn ~ 6900 6700
+NoConn ~ 6900 6400
+Text HLabel 4000 7100 0    50   Input ~ 0
+HLT
+Text HLabel 10000 5250 2    50   Output ~ 0
+~CLK
+Text HLabel 10000 4800 2    50   Output ~ 0
+CLK
 $Comp
 L Device:LED D1
 U 1 1 5D7E1511
-P 5550 6350
-F 0 "D1" V 5497 6428 50  0000 L CNN
-F 1 "LED" V 5588 6428 50  0000 L CNN
-F 2 "" H 5550 6350 50  0001 C CNN
-F 3 "~" H 5550 6350 50  0001 C CNN
-	1    5550 6350
+P 4550 6950
+F 0 "D1" V 4497 7028 50  0000 L CNN
+F 1 "LED" V 4588 7028 50  0000 L CNN
+F 2 "" H 4550 6950 50  0001 C CNN
+F 3 "~" H 4550 6950 50  0001 C CNN
+	1    4550 6950
 	0    1    1    0   
 $EndComp
-Connection ~ 5550 6200
-Wire Wire Line
-	5550 6200 5200 6200
-$Comp
-L Device:R R11
-U 1 1 5D7E85CC
-P 5550 6750
-F 0 "R11" H 5620 6796 50  0000 L CNN
-F 1 "1K" H 5620 6705 50  0000 L CNN
-F 2 "" V 5480 6750 50  0001 C CNN
-F 3 "~" H 5550 6750 50  0001 C CNN
-	1    5550 6750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6400 6500 6400 6600
 $Comp
 L power:VCC #PWR09
 U 1 1 5D7FC763
-P 5150 6750
-F 0 "#PWR09" H 5150 6600 50  0001 C CNN
-F 1 "VCC" H 5167 6923 50  0000 C CNN
-F 2 "" H 5150 6750 50  0001 C CNN
-F 3 "" H 5150 6750 50  0001 C CNN
-	1    5150 6750
+P 4550 6250
+F 0 "#PWR09" H 4550 6100 50  0001 C CNN
+F 1 "VCC" H 4567 6423 50  0000 C CNN
+F 2 "" H 4550 6250 50  0001 C CNN
+F 3 "" H 4550 6250 50  0001 C CNN
+	1    4550 6250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5550 6500 5550 6600
+	4550 6800 4550 6700
 Wire Wire Line
-	5550 6900 5150 6900
+	4000 7100 4550 7100
+Connection ~ 4550 7100
 Wire Wire Line
-	5150 6900 5150 6750
+	4550 7100 5350 7100
+Wire Wire Line
+	4550 6250 4550 6400
+Wire Wire Line
+	5750 7000 5900 7000
+$Comp
+L 74xx:74LS32 U?
+U 1 1 5D5A68E7
+P 5250 4750
+F 0 "U?" V 5204 4938 50  0000 L CNN
+F 1 "74LS32" V 5295 4938 50  0000 L CNN
+F 2 "" H 5250 4750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 5250 4750 50  0001 C CNN
+	1    5250 4750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5350 4450 5350 4300
+Wire Wire Line
+	5350 4300 6900 4300
+Wire Wire Line
+	5250 5900 5900 5900
+Text GLabel 4600 4300 0    50   Input ~ 0
+Ext_CLK_PULSE
+Wire Wire Line
+	4600 4300 5150 4300
+Wire Wire Line
+	5150 4300 5150 4450
+Wire Wire Line
+	7500 3800 8500 3800
+Wire Wire Line
+	6900 1900 6900 4300
+Connection ~ 7700 3600
+Connection ~ 8500 3800
+Wire Wire Line
+	8500 3800 10450 3800
+Wire Wire Line
+	3000 1950 3000 5800
+$Comp
+L 74xx:74LS14 U?
+U 2 1 5D6C1C62
+P 10400 6100
+F 0 "U?" H 10400 6417 50  0000 C CNN
+F 1 "74LS14" H 10400 6326 50  0000 C CNN
+F 2 "" H 10400 6100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 10400 6100 50  0001 C CNN
+	2    10400 6100
+	1    0    0    -1  
+$EndComp
+Text HLabel 11700 6100 2    50   Input ~ 0
+CLK_PULSE
+$Comp
+L 74xx:74LS14 U?
+U 3 1 5D6E83F0
+P 11150 6100
+F 0 "U?" H 11150 6417 50  0000 C CNN
+F 1 "74LS14" H 11150 6326 50  0000 C CNN
+F 2 "" H 11150 6100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 11150 6100 50  0001 C CNN
+	3    11150 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10700 6100 10850 6100
+$Comp
+L 74xx:74LS14 U?
+U 4 1 5D70A81D
+P 9500 5250
+F 0 "U?" H 9500 4950 50  0000 C CNN
+F 1 "74LS14" H 9500 5050 50  0000 C CNN
+F 2 "" H 9500 5250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 9500 5250 50  0001 C CNN
+	4    9500 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 3600 7700 4800
+$Comp
+L Device:R R11
+U 1 1 5D7E85CC
+P 4550 6550
+F 0 "R11" H 4620 6596 50  0000 L CNN
+F 1 "1K" H 4620 6505 50  0000 L CNN
+F 2 "" V 4480 6550 50  0001 C CNN
+F 3 "~" H 4550 6550 50  0001 C CNN
+	1    4550 6550
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R 1K
+U 1 1 5D7A64EB
+P 5350 7400
+F 0 "1K" H 5420 7446 50  0000 L CNN
+F 1 "1K" H 5420 7355 50  0000 L CNN
+F 2 "" V 5280 7400 50  0001 C CNN
+F 3 "~" H 5350 7400 50  0001 C CNN
+	1    5350 7400
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D7A6B9F
+P 5350 7700
+F 0 "#PWR?" H 5350 7450 50  0001 C CNN
+F 1 "GND" H 5355 7527 50  0000 C CNN
+F 2 "" H 5350 7700 50  0001 C CNN
+F 3 "" H 5350 7700 50  0001 C CNN
+	1    5350 7700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 7550 5350 7700
+Wire Wire Line
+	5350 7250 5350 7100
+Connection ~ 5350 7100
+Wire Wire Line
+	5350 7100 5900 7100
+Wire Wire Line
+	6900 5800 7050 5800
+Wire Wire Line
+	9800 5250 10000 5250
+Wire Wire Line
+	5900 6100 5800 6100
+Wire Wire Line
+	5800 6100 5800 6150
+Wire Wire Line
+	5800 6200 5900 6200
+Wire Wire Line
+	7050 5800 7050 5400
+Wire Wire Line
+	5550 6150 5800 6150
+Connection ~ 7050 5800
+Wire Wire Line
+	7050 5800 7700 5800
+Connection ~ 5800 6150
+Wire Wire Line
+	5800 6150 5800 6200
+Wire Wire Line
+	6900 6100 9050 6100
+Wire Wire Line
+	11450 6100 11700 6100
+Wire Wire Line
+	5750 7600 8500 7600
+Wire Wire Line
+	5750 7000 5750 7600
+Wire Wire Line
+	8500 3800 8500 7600
+Wire Wire Line
+	5250 5050 5250 5900
+Wire Wire Line
+	5550 5400 5550 6150
+Wire Wire Line
+	5550 5400 7050 5400
+Connection ~ 7700 4800
+Wire Wire Line
+	7700 4800 7700 5250
+Connection ~ 7700 5250
+Wire Wire Line
+	7700 5250 7700 5800
+Wire Wire Line
+	7700 4800 10000 4800
+Wire Wire Line
+	7700 5250 9200 5250
+Text Notes 5600 5350 0    50   ~ 0
+Isolates CLK from PulseCap
 $EndSCHEMATC

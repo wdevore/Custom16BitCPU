@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:CPU16Bit-cache
-EELAYER 30 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -60,7 +60,7 @@ F0 "Micro Code Control" 50
 F1 "Control.sch" 50
 $EndSheet
 $Sheet
-S 6250 2700 1300 1000
+S 3900 4650 1300 1000
 U 5D4D1D36
 F0 "General Purpose Registers" 50
 F1 "GPRs.sch" 50
