@@ -112,17 +112,6 @@ Wire Wire Line
 Wire Wire Line
 	12200 2900 12200 2800
 Wire Wire Line
-	13000 1700 13000 1400
-Wire Wire Line
-	12500 5200 12300 5200
-Wire Wire Line
-	12300 5200 12300 3000
-Wire Wire Line
-	12300 3000 12500 3000
-Connection ~ 12300 5200
-Text HLabel 11750 7100 3    50   Input ~ 0
-CLK_PULSE
-Wire Wire Line
 	12500 5100 12200 5100
 Wire Wire Line
 	12200 5100 12200 5000
@@ -161,8 +150,6 @@ Wire Wire Line
 	12500 4800 12100 4800
 Connection ~ 12100 4800
 Connection ~ 12200 5100
-Text HLabel 11550 7100 3    50   Input ~ 0
-LD_Flags
 Wire Wire Line
 	13500 2000 14200 2000
 Wire Wire Line
@@ -241,17 +228,6 @@ NoConn ~ 12500 4500
 NoConn ~ 9400 3700
 NoConn ~ 9400 3600
 NoConn ~ 9400 3500
-$Comp
-L power:VCC #PWR?
-U 1 1 5DC47966
-P 7100 5050
-F 0 "#PWR?" H 7100 4900 50  0001 C CNN
-F 1 "VCC" H 7117 5223 50  0000 C CNN
-F 2 "" H 7100 5050 50  0001 C CNN
-F 3 "" H 7100 5050 50  0001 C CNN
-	1    7100 5050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2000 1050 1700 1050
 Wire Wire Line
@@ -321,14 +297,6 @@ Wire Wire Line
 Wire Wire Line
 	7750 4500 8400 4500
 Wire Wire Line
-	11750 6900 11750 7100
-Wire Wire Line
-	11550 6900 11550 7100
-Wire Wire Line
-	11650 6300 11650 5200
-Wire Wire Line
-	11650 5200 12300 5200
-Wire Wire Line
 	12100 4800 12100 7100
 Wire Wire Line
 	12400 5400 12400 7100
@@ -342,12 +310,6 @@ Text Notes 12050 7650 0    50   ~ 0
 Asr_Flags is optional
 Text Notes 14650 2250 0    50   ~ 0
 Flags are routed\nto Control Logic
-Wire Wire Line
-	7650 5300 7650 6450
-Wire Wire Line
-	7650 5300 8400 5300
-Text HLabel 7650 6450 3    50   Input ~ 0
-~Asr_ALU
 Wire Wire Line
 	8400 5400 7100 5400
 Wire Wire Line
@@ -406,13 +368,13 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 2050 3750 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 Text HLabel 1500 3850 0    50   Input ~ 0
-LD_ALU_A
+LD_ALU_A_Lo
 Text HLabel 1500 3650 0    50   Input ~ 0
 CLK_PULSE
 Wire Wire Line
 	1500 3850 1750 3850
 Wire Wire Line
-	1500 3650 1750 3650
+	1500 3650 1600 3650
 Text HLabel 1500 4250 0    50   Input ~ 0
 ~Ars_ALU_A_Lo
 $Comp
@@ -546,8 +508,6 @@ Wire Wire Line
 	1800 7200 1650 7200
 Wire Wire Line
 	1800 7400 1650 7400
-Text HLabel 1650 7650 0    50   Input ~ 0
-~Ars_ALU_B_Lo
 $Comp
 L 74xx:74LS574 U?
 U 1 1 5DA427D8
@@ -673,20 +633,9 @@ Entry Wire Line
 Entry Wire Line
 	3400 8850 3500 8950
 Wire Wire Line
-	2350 3750 2850 3750
-Wire Wire Line
-	2850 3750 2850 5500
-Wire Wire Line
 	2850 5500 4000 5500
-Connection ~ 2850 3750
 Wire Wire Line
-	2850 3750 4000 3750
-Wire Wire Line
-	1500 4250 3200 4250
-Wire Wire Line
-	3200 4250 3200 3850
-Wire Wire Line
-	3200 3850 4000 3850
+	1500 4250 2850 4250
 Wire Wire Line
 	2400 7300 3000 7300
 Wire Wire Line
@@ -704,12 +653,6 @@ Text HLabel 1500 5600 0    50   Input ~ 0
 ~Ars_ALU_A_Hi
 Wire Wire Line
 	1500 5600 4000 5600
-Wire Wire Line
-	1650 7650 3700 7650
-Text HLabel 1650 9250 0    50   Input ~ 0
-~Ars_ALU_B_Hi
-Wire Wire Line
-	1650 9250 4000 9250
 Wire Bus Line
 	2100 850  3400 850 
 Text Label 5050 3550 0    50   ~ 0
@@ -1059,10 +1002,6 @@ Wire Wire Line
 Wire Wire Line
 	10650 7500 10650 7400
 Wire Wire Line
-	10650 7400 11250 7400
-Wire Wire Line
-	11250 7400 11250 8300
-Wire Wire Line
 	9750 8500 9750 8900
 Wire Wire Line
 	9850 8500 9850 8900
@@ -1118,47 +1057,129 @@ Wire Bus Line
 $Comp
 L 74xx:74LS08 U?
 U 3 1 5DEBEEFC
-P 11650 6600
-F 0 "U?" V 11696 6420 50  0000 R CNN
-F 1 "74LS08" V 11605 6420 50  0000 R CNN
-F 2 "" H 11650 6600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 11650 6600 50  0001 C CNN
-	3    11650 6600
+P 11650 7850
+F 0 "U?" V 11696 7670 50  0000 R CNN
+F 1 "74LS08" V 11605 7670 50  0000 R CNN
+F 2 "" H 11650 7850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 11650 7850 50  0001 C CNN
+	3    11650 7850
 	0    -1   -1   0   
 $EndComp
-$Comp
-L 74xx:74LS08 U?
-U 3 1 5DEC0259
-P 11500 8850
-F 0 "U?" V 11546 8670 50  0000 R CNN
-F 1 "74LS08" V 11455 8670 50  0000 R CNN
-F 2 "" H 11500 8850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 11500 8850 50  0001 C CNN
-	3    11500 8850
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	11250 8300 11500 8300
-Wire Wire Line
-	11500 8300 11500 8550
 Text HLabel 11150 8300 3    50   Input ~ 0
 ~Asr_ALU_Out
-Text HLabel 11600 9300 3    50   Input ~ 0
+Text HLabel 11750 8300 3    50   Input ~ 0
 CLK_PULSE
-Text HLabel 11400 9300 3    50   Input ~ 0
+Text HLabel 11550 8300 3    50   Input ~ 0
 LD_ALU_Out
 Wire Wire Line
-	11400 9150 11400 9300
+	11550 8150 11550 8300
 Wire Wire Line
-	11600 9150 11600 9300
+	11750 8150 11750 8300
+$Comp
+L 74xx:74LS08 U?
+U 4 1 5D598972
+P 2050 4750
+F 0 "U?" H 2050 5075 50  0000 C CNN
+F 1 "74LS08" H 2050 4984 50  0000 C CNN
+F 2 "" H 2050 4750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 2050 4750 50  0001 C CNN
+	4    2050 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11650 5200 11650 7400
+Wire Wire Line
+	10650 7400 11650 7400
+Wire Wire Line
+	11650 7550 11650 7400
+Connection ~ 11650 7400
+Wire Wire Line
+	1600 3650 1600 4650
+Wire Wire Line
+	1600 4650 1750 4650
+Connection ~ 1600 3650
+Wire Wire Line
+	1600 3650 1750 3650
+Text HLabel 1500 4850 0    50   Input ~ 0
+LD_ALU_A_Hi
+Wire Wire Line
+	1500 4850 1750 4850
+Wire Wire Line
+	2350 3750 4000 3750
+Wire Wire Line
+	2350 4750 2850 4750
+Wire Wire Line
+	2850 4750 2850 5500
+Wire Wire Line
+	2850 4250 2850 3850
+Wire Wire Line
+	2850 3850 4000 3850
+Wire Wire Line
+	8400 5300 8350 5300
+Wire Wire Line
+	8350 5300 8350 5850
+Wire Wire Line
+	8350 5850 8900 5850
+Wire Wire Line
+	8900 5850 8900 5800
+Wire Wire Line
+	8850 5750 8850 5800
+Wire Wire Line
+	8850 5800 8900 5800
+Wire Wire Line
+	8950 5800 8950 5750
+Connection ~ 8900 5800
+Wire Wire Line
+	8900 5800 8950 5800
+Text Notes 6650 6250 0    50   ~ 0
+may need to control ~CE
+Wire Wire Line
+	8900 2550 8900 2700
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5D698B2D
+P 8900 2550
+F 0 "#PWR?" H 8900 2400 50  0001 C CNN
+F 1 "+3V3" H 8915 2723 50  0000 C CNN
+F 2 "" H 8900 2550 50  0001 C CNN
+F 3 "" H 8900 2550 50  0001 C CNN
+	1    8900 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5D69F7AC
+P 7100 5050
+F 0 "#PWR?" H 7100 4900 50  0001 C CNN
+F 1 "+3V3" H 7115 5223 50  0000 C CNN
+F 2 "" H 7100 5050 50  0001 C CNN
+F 3 "" H 7100 5050 50  0001 C CNN
+	1    7100 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11650 3000 11650 5200
+Connection ~ 11650 5200
+Wire Wire Line
+	11650 5200 12500 5200
+Wire Wire Line
+	11650 3000 12500 3000
+Text HLabel 1650 7650 0    50   Input ~ 0
+~Ars_ALU_B_Lo
+Text HLabel 1650 9250 0    50   Input ~ 0
+~Ars_ALU_B_Hi
+Wire Wire Line
+	1650 9250 4000 9250
+Wire Wire Line
+	1650 7650 3700 7650
 Wire Bus Line
 	6150 9000 10350 9000
 Wire Bus Line
 	7800 850  7800 4300
 Wire Bus Line
-	2100 850  2100 2450
-Wire Bus Line
 	5600 850  5600 8850
 Wire Bus Line
 	3400 850  3400 8850
+Wire Bus Line
+	2100 850  2100 2450
 $EndSCHEMATC

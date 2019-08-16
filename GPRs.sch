@@ -9,7 +9,7 @@ Title "General Purpose Registers"
 Date ""
 Rev ""
 Comp "16 16bit Registers"
-Comment1 ""
+Comment1 "x0-x15 Registers"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -218,7 +218,7 @@ Connection ~ 8750 4200
 Wire Wire Line
 	8750 4200 8750 4250
 Text HLabel 3200 5350 0    50   Input ~ 0
-~Asr_Mem_Lo
+~Asr_GPR
 Wire Wire Line
 	8850 7300 8750 7300
 Wire Wire Line
@@ -677,6 +677,11 @@ Wire Wire Line
 	8650 4200 8650 5350
 Wire Wire Line
 	8350 7350 8350 5350
+Connection ~ 8350 5350
+Wire Wire Line
+	8350 5350 8650 5350
+Wire Wire Line
+	8350 7350 8750 7350
 Wire Bus Line
 	6750 1350 6750 8050
 Wire Bus Line
@@ -685,9 +690,4 @@ Wire Bus Line
 	4050 1350 6750 1350
 Wire Bus Line
 	6400 1600 6400 7600
-Connection ~ 8350 5350
-Wire Wire Line
-	8350 5350 8650 5350
-Wire Wire Line
-	8350 7350 8750 7350
 $EndSCHEMATC
