@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 5 7
+Sheet 5 8
 Title "RAM memory"
 Date "2019-07-12"
 Rev "1.0"
@@ -104,7 +104,7 @@ External Programming\nCard
 Text GLabel 2250 7750 0    50   Input ~ 0
 ~Ext_Asr_Mem
 Text HLabel 5300 6750 0    50   Input ~ 0
-~Ars_Mem
+~Ars_Mem_OE
 Text GLabel 2250 7600 0    50   Input ~ 0
 ~Ext_Mem_CE
 $Comp

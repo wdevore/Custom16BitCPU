@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 7 7
+Sheet 7 8
 Title "General Purpose Registers"
 Date ""
 Rev ""
@@ -187,19 +187,11 @@ Wire Wire Line
 Wire Wire Line
 	8250 7100 8850 7100
 Text HLabel 3250 3200 0    50   Input ~ 0
-LD_GPR
+LD_GPR_Lo
 Wire Wire Line
 	3250 3200 5050 3200
 Wire Wire Line
 	7150 2300 6500 2300
-Text Label 6500 2300 0    50   ~ 0
-IR_0
-Text Label 6500 2400 0    50   ~ 0
-IR_1
-Text Label 6500 2500 0    50   ~ 0
-IR_2
-Text Label 6500 2600 0    50   ~ 0
-IR_3
 Wire Wire Line
 	7150 2400 6500 2400
 Wire Wire Line
@@ -218,7 +210,7 @@ Connection ~ 8750 4200
 Wire Wire Line
 	8750 4200 8750 4250
 Text HLabel 3200 5350 0    50   Input ~ 0
-~Asr_GPR
+~Asr_GPR_Lo
 Wire Wire Line
 	8850 7300 8750 7300
 Wire Wire Line
@@ -249,14 +241,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 5350 3300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7150 4000 6500 4000
-Text Label 6500 4000 0    50   ~ 0
-IR_0
-Text Label 6500 4100 0    50   ~ 0
-IR_1
-Text Label 6500 4200 0    50   ~ 0
-IR_2
-Text Label 6500 4300 0    50   ~ 0
-IR_3
 Wire Wire Line
 	7150 4100 6500 4100
 Wire Wire Line
@@ -273,14 +257,6 @@ Entry Wire Line
 	6400 4200 6500 4300
 Wire Wire Line
 	7150 5700 6500 5700
-Text Label 6500 5700 0    50   ~ 0
-IR_0
-Text Label 6500 5800 0    50   ~ 0
-IR_1
-Text Label 6500 5900 0    50   ~ 0
-IR_2
-Text Label 6500 6000 0    50   ~ 0
-IR_3
 Wire Wire Line
 	7150 5800 6500 5800
 Wire Wire Line
@@ -297,14 +273,6 @@ Entry Wire Line
 	6400 5900 6500 6000
 Wire Wire Line
 	7150 7400 6500 7400
-Text Label 6500 7400 0    50   ~ 0
-IR_0
-Text Label 6500 7500 0    50   ~ 0
-IR_1
-Text Label 6500 7600 0    50   ~ 0
-IR_2
-Text Label 6500 7700 0    50   ~ 0
-IR_3
 Wire Wire Line
 	7150 7500 6500 7500
 Wire Wire Line
@@ -455,13 +423,13 @@ Entry Wire Line
 Entry Wire Line
 	6300 1800 6400 1900
 Text HLabel 6050 1500 0    50   Input ~ 0
-IR_0
+GPR_0
 Text HLabel 6050 1600 0    50   Input ~ 0
-IR_1
+GPR_1
 Text HLabel 6050 1700 0    50   Input ~ 0
-IR_2
+GPR_2
 Text HLabel 6050 1800 0    50   Input ~ 0
-IR_3
+GPR_3
 Entry Wire Line
 	5550 1350 5450 1250
 Entry Wire Line
@@ -666,22 +634,73 @@ Wire Bus Line
 	6750 1350 10450 1350
 Connection ~ 6750 1350
 Wire Wire Line
-	5850 5000 5850 6700
-Connection ~ 5850 5000
-Connection ~ 5850 6700
-Wire Wire Line
 	3250 3400 5050 3400
-Wire Wire Line
-	3200 5350 8350 5350
 Wire Wire Line
 	8650 4200 8650 5350
 Wire Wire Line
-	8350 7350 8350 5350
-Connection ~ 8350 5350
-Wire Wire Line
-	8350 5350 8650 5350
-Wire Wire Line
 	8350 7350 8750 7350
+Text HLabel 3250 6800 0    50   Input ~ 0
+CLK_PULSE
+Text HLabel 3250 6600 0    50   Input ~ 0
+LD_GPR_Hi
+Wire Wire Line
+	3250 6600 5050 6600
+Wire Wire Line
+	3250 6800 5050 6800
+$Comp
+L 74xx:74LS00 U?
+U 2 1 5D66FF62
+P 5350 6700
+F 0 "U?" H 5350 7025 50  0000 C CNN
+F 1 "74LS00" H 5350 6934 50  0000 C CNN
+F 2 "" H 5350 6700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 5350 6700 50  0001 C CNN
+	2    5350 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 6700 5850 6700
+Connection ~ 5850 6700
+Wire Wire Line
+	3200 5350 8650 5350
+Wire Wire Line
+	8350 7350 8350 5450
+Wire Wire Line
+	8350 5450 3200 5450
+Text HLabel 3200 5450 0    50   Input ~ 0
+~Asr_GPR_Hi
+Text Label 6500 2300 0    50   ~ 0
+GPR_0
+Text Label 6500 2400 0    50   ~ 0
+GPR_1
+Text Label 6500 2500 0    50   ~ 0
+GPR_2
+Text Label 6500 2600 0    50   ~ 0
+GPR_3
+Text Label 6500 7400 0    50   ~ 0
+GPR_0
+Text Label 6500 7500 0    50   ~ 0
+GPR_1
+Text Label 6500 7600 0    50   ~ 0
+GPR_2
+Text Label 6500 7700 0    50   ~ 0
+GPR_3
+Text Label 6500 4000 0    50   ~ 0
+GPR_0
+Text Label 6500 4100 0    50   ~ 0
+GPR_1
+Text Label 6500 4200 0    50   ~ 0
+GPR_2
+Text Label 6500 4300 0    50   ~ 0
+GPR_3
+Text Label 6500 5700 0    50   ~ 0
+GPR_0
+Text Label 6500 5800 0    50   ~ 0
+GPR_1
+Text Label 6500 5900 0    50   ~ 0
+GPR_2
+Text Label 6500 6000 0    50   ~ 0
+GPR_3
 Wire Bus Line
 	6750 1350 6750 8050
 Wire Bus Line

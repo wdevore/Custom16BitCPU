@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 7
+Sheet 1 8
 Title "16Bit CPU"
 Date "2019-07-05"
 Rev "1.0"
@@ -64,5 +64,11 @@ S 3900 4650 1300 1000
 U 5D4D1D36
 F0 "General Purpose Registers" 50
 F1 "GPRs.sch" 50
+$EndSheet
+$Sheet
+S 6350 2250 1350 950 
+U 5D589A0A
+F0 "Specific Registers" 50
+F1 "Registers.sch" 50
 $EndSheet
 $EndSCHEMATC
